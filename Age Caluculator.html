@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+ABOUT ME
+</head>
+
+<body>
+
+<h1> Raja Phani Sasank Jonnalagadda </h1>
+
+
+
+<p>
+I am Currently EIU graduate student pusuing masters in Computer Technology. </p>
+
+
+<div>
+
+<img src="C:\Users\bodla\Downloads\Sasank Jrp.jpeg">
+
+
+</div>
+<div class ="image">
+        <div class="dob">
+            <h2>AGE CALUCULATOR</h2>
+            <label for="byear">Please Enter your birth year: </label>        
+            <input type="text" id="byear" name="byear"><br><br>
+            <label for="cyear">   Current Year:   </label>
+            <input type="text" id="cyear" name="cyear"  readonly="readonly"><br><br>
+            <input type="submit" value="Submit" id="sub"> 
+            <p id="agedisp" style="text-transform:uppercase"></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("cyear").defaultValue = new Date().getFullYear();
+        document.getElementById('sub').addEventListener('click', function () {
+        var enteredDate = document.getElementById('byear').value;
+        if(enteredDate === "" || enteredDate >= 2023){
+            alert("Enter the birth year and should not exceed the current year");
+
+        }else{
+            var years = cyear.value - enteredDate;
+            document.getElementById("agedisp").innerHTML = "Your are about " + years + " Years old my friend";
+
+        }
+                      
+    });
+    </script>
+</body>
+</html>
